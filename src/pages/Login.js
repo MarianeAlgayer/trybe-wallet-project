@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { login } from '../actions';
+import '../styles/Login.css';
 
 class Login extends React.Component {
   state = {
@@ -50,12 +51,11 @@ class Login extends React.Component {
     const { email, password, isBtnDisabled } = this.state;
 
     return (
-      <div>
-        <h1>Trybe Wallet</h1>
-        <h2>Login</h2>
+      <div className="login-container">
         <form>
+          <h1>Trybe Wallet</h1>
           <label htmlFor="email">
-            Email
+            Email:
             <input
               type="email"
               id="email"
@@ -81,7 +81,7 @@ class Login extends React.Component {
             disabled={ isBtnDisabled }
             onClick={ this.handleClick }
           >
-            Entrar
+            ENTRAR
           </button>
         </form>
       </div>
