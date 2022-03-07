@@ -1,0 +1,21 @@
+header {
+  align-items: center;
+  background-color: rgb(34, 34, 34);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+header h1 {
+  font-weight: 300;
+}
+
+header div {
+  display: flex;
+}
+
+header div p {
+  font-weight: 300;
+  margin-left: 16px;
+}
