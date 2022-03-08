@@ -77,7 +77,7 @@ class Login extends React.Component {
             />
           </label>
           <button
-            type="submit"
+            type="button"
             disabled={ isBtnDisabled }
             onClick={ this.handleClick }
           >
