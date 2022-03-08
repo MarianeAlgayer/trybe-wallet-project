@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { saveExpenceWithExchangeRates, fetchCurrencies } from '../actions';
 
+const initialTag = 'Alimentação';
+
 class WalletForm extends React.Component {
   state = {
     value: 0,
     currency: 'USD',
     method: 'Dinheiro',
-    tag: 'Alimentação',
+    tag: initialTag,
     description: '',
   }
 
@@ -37,7 +39,7 @@ class WalletForm extends React.Component {
       value: 0,
       currency: 'USD',
       method: 'Dinheiro',
-      tag: 'Alimentação',
+      tag: initialTag,
       description: '',
     });
   }
