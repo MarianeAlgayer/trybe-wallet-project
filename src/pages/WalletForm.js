@@ -32,6 +32,14 @@ class WalletForm extends React.Component {
     };
 
     dispatch(saveExpenceWithExchangeRates(expenseObj));
+
+    this.setState({
+      value: 0,
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
+      description: '',
+    });
   }
 
   render() {
