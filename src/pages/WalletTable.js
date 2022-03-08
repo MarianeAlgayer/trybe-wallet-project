@@ -20,7 +20,7 @@ class WalletTable extends React.Component {
           <th>Editar/excluir</th>
         </tr>
         { expenses.map(({
-          id, description, tag, method, value, currency, convertedValue, exchangeRates,
+          id, description, tag, method, value, currency, exchangeRates,
         }) => (
           <tr key={ id }>
             <td>{ description }</td>
@@ -29,7 +29,7 @@ class WalletTable extends React.Component {
             <td>{ value }</td>
             <td>{ exchangeRates[currency].name }</td>
             <td>{ exchangeRates[currency].ask }</td>
-            <td>{ convertedValue }</td>
+            <td>{ value * exchangeRates[currency].ask }</td>
             <td>{ exchangeRates[currency].codein }</td>
           </tr>
         ))}

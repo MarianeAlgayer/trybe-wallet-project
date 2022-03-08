@@ -27,10 +27,8 @@ export const fetchCurrencies = () => (dispatch) => fetch('https://economia.aweso
 
 export const saveExpenceWithExchangeRates = (expense) => async (dispatch) => {
   const exchangeRates = await fetchExchangeRates();
-  const convertedValue = exchangeRates[expense.currency].ask * expense.value;
   const expenceWithExchangeRates = {
     ...expense,
-    convertedValue,
     exchangeRates,
   };
   dispatch(saveExpense(expenceWithExchangeRates));

@@ -8,7 +8,7 @@ class WalletHeader extends React.Component {
 
     if (expenses.length > 0) {
       const convertedValues = expenses
-        .map((expense) => expense.convertedValue);
+        .map((expense) => expense.value * expense.exchangeRates[expense.currency].ask);
       const totalValue = convertedValues.reduce((result, number) => result + number);
       return totalValue.toFixed(2);
     }
