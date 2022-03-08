@@ -3,6 +3,7 @@ import fetchExchangeRates from '../services/API';
 export const LOGIN = 'LOGIN';
 export const GET_CURRENCIES = 'GET_CURRENCIES';
 export const SAVE_EXPENSE = 'SAVE_EXPENSE';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const login = (email) => ({
   type: LOGIN,
@@ -17,6 +18,11 @@ const getCurrencies = (currencies) => ({
 const saveExpense = (expense) => ({
   type: SAVE_EXPENSE,
   expense,
+});
+
+export const deleteExpense = (id) => ({
+  type: DELETE_EXPENSE,
+  id,
 });
 
 const filterUSDT = (dataAPI) => Object.keys(dataAPI).filter((key) => key !== 'USDT');
