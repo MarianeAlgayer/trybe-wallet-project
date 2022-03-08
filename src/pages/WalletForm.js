@@ -49,7 +49,7 @@ class WalletForm extends React.Component {
     const { currencies } = this.props;
 
     return (
-      <form>
+      <form className="wallet-form">
         <label htmlFor="value">
           Valor:
           <input

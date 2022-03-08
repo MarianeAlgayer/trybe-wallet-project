@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.login-container form {
+.login-form {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -14,21 +14,21 @@
   width: 40%;
 }
 
-.login-container form h1 {
+.login-form h1 {
   text-align: center;
 }
 
-.login-container form label {
+.login-form label {
   margin-top: 24px;
 }
 
-.login-container form input {
+.login-form input {
   border-bottom: 2px solid rgb(34, 34, 34);
   padding: 8px;
   width: 100%;
 }
 
-.login-container form button {
+.login-form button {
   background-color: rgb(251, 192, 4);
   margin-top: 24px;
   padding: 16px;

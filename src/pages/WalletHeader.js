@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 class WalletHeader extends React.Component {
   getTotalValue = () => {
     const { expenses } = this.props;
+    const initialValue = 0;
 
     if (expenses.length > 0) {
       const convertedValues = expenses
@@ -13,7 +14,7 @@ class WalletHeader extends React.Component {
       return totalValue.toFixed(2);
     }
 
-    return 0;
+    return initialValue.toFixed(2);
   };
 
   render() {

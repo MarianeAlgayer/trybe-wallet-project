@@ -1,4 +1,4 @@
-header {
+.wallet-container header {
   align-items: center;
   background-color: rgb(34, 34, 34);
   color: white;
@@ -7,15 +7,57 @@ header {
   padding: 32px;
 }
 
-header h1 {
+.wallet-container header h1 {
   font-weight: 300;
 }
 
-header div {
+.wallet-container header div {
   display: flex;
 }
 
-header div p {
+.wallet-container header div p {
   font-weight: 300;
   margin-left: 16px;
+}
+
+.wallet-form {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+}
+
+.wallet-form input , .wallet-form select {
+  font-family: Montserrat, sans-serif;
+  margin: 0 8px;
+  padding: 4px;
+}
+
+.wallet-form button {
+  background-color: rgb(251, 192, 4);
+  font-family: Montserrat, sans-serif;
+  padding: 4px 8px;
+}
+
+.wallet-table {
+  text-align: center;
+}
+
+.wallet-table thead {
+  background-color: white;
+}
+
+.wallet-table th , .wallet-table td {
+  padding: 16px;
+}
+
+.wallet-table td {
+  border-bottom: 1px solid white;
+}
+
+.wallet-table button {
+  background-color: rgb(251, 192, 4);
+  font-family: Montserrat, sans-serif;
+  padding: 4px 8px;
 }
