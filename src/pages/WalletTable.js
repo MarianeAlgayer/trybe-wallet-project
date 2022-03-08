@@ -17,7 +17,7 @@ class WalletTable extends React.Component {
           <th>Câmbio utilizado</th>
           <th>Valor convertido</th>
           <th>Moeda de conversão</th>
-          <th>Editar/excluir</th>
+          <th>Editar/Excluir</th>
         </tr>
         { expenses.map(({
           id, description, tag, method, value, currency, exchangeRates,
@@ -30,7 +30,11 @@ class WalletTable extends React.Component {
             <td>{ exchangeRates[currency].name }</td>
             <td>{ exchangeRates[currency].ask }</td>
             <td>{ value * exchangeRates[currency].ask }</td>
-            <td>{ exchangeRates[currency].codein }</td>
+            <td>Real</td>
+            <td>
+              <button type="button">Editar</button>
+              <button type="button">Excluir</button>
+            </td>
           </tr>
         ))}
       </table>

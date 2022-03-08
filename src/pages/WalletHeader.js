@@ -24,7 +24,7 @@ class WalletHeader extends React.Component {
         <h1>Trybe Wallet</h1>
         <div>
           <p data-testid="email-field">{`Email: ${email}`}</p>
-          <p data-testid="total-field">{ this.getTotalValue() }</p>
+          <p data-testid="total-field">{`R$ ${this.getTotalValue()}`}</p>
           <p data-testid="header-currency-field">BRL</p>
         </div>
       </header>
