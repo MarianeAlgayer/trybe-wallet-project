@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { login } from '../actions';
-import '../styles/Login.css';
+
+import { login } from '../../actions';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+
+import './style.css';
 
 class Login extends React.Component {
   state = {
@@ -54,35 +58,32 @@ class Login extends React.Component {
       <div className="login-container">
         <form className="login-form">
           <h1>Trybe Wallet</h1>
-          <label htmlFor="email">
-            Email:
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={ email }
-              onChange={ this.handleChange }
-              data-testid="email-input"
-            />
-          </label>
-          <label htmlFor="password">
-            Senha:
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={ password }
-              onChange={ this.handleChange }
-              data-testid="password-input"
-            />
-          </label>
-          <button
-            type="button"
-            disabled={ isBtnDisabled }
+
+          <Input
+            id="email"
+            data-testid="email-input"
+            label="Email:"
+            type="email"
+            value={ email }
+            name="email"
+            onChange={ this.handleChange }
+          />
+
+          <Input
+            id="password"
+            data-testid="password-input"
+            label="Senha:"
+            type="password"
+            value={ password }
+            name="password"
+            onChange={ this.handleChange }
+          />
+
+          <Button
+            label="ENTRAR"
+            isBtnDisabled={ isBtnDisabled }
             onClick={ this.handleClick }
-          >
-            ENTRAR
-          </button>
+          />
         </form>
       </div>
     );
@@ -90,8 +91,8 @@ class Login extends React.Component {
 }
 
 Login.propTypes = {
-  history: PropTypes.objectOf(PropTypes.any).isRequired,
-  dispatch: PropTypes.func.isRequired,
-};
+  history: PropTypes.objectOf(PropTypes.any),
+  dispatch: PropTypes.func,
+}.isRequired;
 
 export default connect()(Login);

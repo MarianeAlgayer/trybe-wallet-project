@@ -23,13 +23,13 @@
 }
 
 .login-form input {
-  border-bottom: 2px solid rgb(34, 34, 34);
+  border-bottom: 2px solid var(--secondary-background-color);
   padding: 8px;
   width: 100%;
 }
 
 .login-form button {
-  background-color: rgb(251, 192, 4);
+  background-color: var(--yellow);
   margin-top: 24px;
   padding: 16px;
 }
