@@ -1,0 +1,35 @@
+.login-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 80px;
+  width: 40%;
+}
+
+.login-form h1 {
+  text-align: center;
+}
+
+.login-form label {
+  margin-top: 24px;
+}
+
+.login-form input {
+  border-bottom: 2px solid var(--secondary-background-color);
+  padding: 8px;
+  width: 100%;
+}
+
+.login-form button {
+  background-color: var(--yellow);
+  margin-top: 24px;
+  padding: 16px;
+}
