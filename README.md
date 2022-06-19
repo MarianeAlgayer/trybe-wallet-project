@@ -1,16 +1,39 @@
-# 🚧 README em construção 🚧
+# Trybe Wallet Project
 
-<!-- Olá, Tryber!
+![image](trybe-wallet.gif)
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+This project is a expense tracker app with currency conversion.
 
-É essencial que você preencha esse documento por conta própria, ok?
+## Technologies
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+HTML, CSS, JavaScript, ReactJS, Redux.
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
+## How to download and run the project
 
--->
+- Clone the repository:
+
+```
+    git clone https://github.com/MarianeAlgayer/trybe-wallet-project.git
+```
+
+- Navigate into the project directory:
+
+```
+    cd trybe-wallet-project
+```
+
+- Install dependencies:
+
+```
+    npm install
+```
+
+- Run the project:
+
+```
+    npm start
+```
+
+## Deploy
+
+You can also access the project here: [deploy link](https://trybe-wallet-project-marianealgayer.vercel.app/).
