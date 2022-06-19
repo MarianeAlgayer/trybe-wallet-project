@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import WalletHeader from './WalletHeader';
-import WalletForm from './WalletForm';
-import WalletTable from './WalletTable';
-import '../styles/Wallet.css';
+
+import WalletHeader from '../../components/WalletHeader';
+import WalletForm from '../../components/WalletForm';
+import WalletTable from '../../components/WalletTable';
+
+import './style.css';
 
 class Wallet extends React.Component {
   render() {

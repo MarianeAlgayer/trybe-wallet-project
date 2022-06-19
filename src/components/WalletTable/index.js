@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { deleteExpense } from '../actions';
+
+import { deleteExpense } from '../../actions';
+import { HEADERS } from '../../utils/constants';
+import Button from '../Button';
 
 class WalletTable extends React.Component {
   handleDeleteBtn = (id) => {
@@ -16,17 +19,10 @@ class WalletTable extends React.Component {
       <table className="wallet-table">
         <thead>
           <tr>
-            <th>Descrição</th>
-            <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            { HEADERS.map((header) => <th key={ header }>{ header }</th>) }
           </tr>
         </thead>
+
         <tbody>
           { expenses.map(({
             id, description, tag, method, value, currency, exchangeRates,
@@ -46,13 +42,10 @@ class WalletTable extends React.Component {
                 <td>{ convertedValue }</td>
                 <td>Real</td>
                 <td>
-                  <button
-                    type="button"
-                    data-testid="delete-btn"
+                  <Button
+                    label="Excluir"
                     onClick={ () => this.handleDeleteBtn(id) }
-                  >
-                    Excluir
-                  </button>
+                  />
                 </td>
               </tr>);
           })}
@@ -67,8 +60,8 @@ const mapStateToProps = (state) => ({
 });
 
 WalletTable.propTypes = {
-  expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
-  dispatch: PropTypes.func.isRequired,
-};
+  expenses: PropTypes.arrayOf(PropTypes.object),
+  dispatch: PropTypes.func,
+}.isRequired;
 
 export default connect(mapStateToProps)(WalletTable);

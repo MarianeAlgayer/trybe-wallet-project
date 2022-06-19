@@ -1,6 +1,6 @@
 .wallet-container header {
   align-items: center;
-  background-color: rgb(34, 34, 34);
+  background-color: var(--secondary-background-color);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -21,6 +21,7 @@
 }
 
 .wallet-form {
+  align-items: center;
   background-color: black;
   color: white;
   display: flex;
@@ -28,20 +29,22 @@
   padding: 32px;
 }
 
+.wallet-form label {
+  margin-right: 16px;
+}
+
 .wallet-form input , .wallet-form select {
-  font-family: Montserrat, sans-serif;
-  margin: 0 8px;
   padding: 4px;
 }
 
-.wallet-form button {
-  background-color: rgb(251, 192, 4);
-  font-family: Montserrat, sans-serif;
+.wallet-form button , .wallet-table button {
+  background-color: var(--yellow);
   padding: 4px 8px;
 }
 
 .wallet-table {
   text-align: center;
+  width: 100%;
 }
 
 .wallet-table thead {
@@ -56,8 +59,3 @@
   border-bottom: 1px solid white;
 }
 
-.wallet-table button {
-  background-color: rgb(251, 192, 4);
-  font-family: Montserrat, sans-serif;
-  padding: 4px 8px;
-}
