@@ -13,7 +13,7 @@ HTML, CSS, JavaScript, ReactJS, Redux.
 - Clone the repository:
 
 ```
-    git clone https://github.com/MarianeAlgayer/trybe-wallet-project.git
+    git clone git@github.com:MarianeAlgayer/trybe-wallet-project.git
 ```
 
 - Navigate into the project directory:
