@@ -9,8 +9,10 @@ class WalletHeader extends React.Component {
 
     if (expenses.length > 0) {
       const convertedValues = expenses
-        .map((expense) => expense.value * expense.exchangeRates[expense.currency].ask);
+        .map(({ value, exchangeRates, currency }) => value * exchangeRates[currency].ask);
+
       const totalValue = convertedValues.reduce((result, number) => result + number);
+
       return totalValue.toFixed(2);
     }
 
@@ -23,8 +25,9 @@ class WalletHeader extends React.Component {
     return (
       <header>
         <h1>Trybe Wallet</h1>
+
         <div>
-          <p data-testid="email-field">{`Email: ${email}`}</p>
+          <p data-testid="email-field">{`E-mail: ${email}`}</p>
           <p data-testid="total-field">{`R$ ${this.getTotalValue()}`}</p>
           <p data-testid="header-currency-field">BRL</p>
         </div>
@@ -39,8 +42,8 @@ const mapStateToProps = (state) => ({
 });
 
 WalletHeader.propTypes = {
-  email: PropTypes.string.isRequired,
-  expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  email: PropTypes.string,
+  expenses: PropTypes.arrayOf(PropTypes.object),
+}.isRequired;
 
 export default connect(mapStateToProps)(WalletHeader);
